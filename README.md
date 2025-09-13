@@ -9,6 +9,7 @@
 ---
 
 ## Backend
+- Công nghệ: **Spring boot + Spring security**
 - API chạy trên: `http://localhost:8080/miniblog/api`  
 - **Database:**  
   - File dữ liệu mẫu: `data.sql`  
@@ -34,7 +35,8 @@ spring.jpa.show-sql=true
    - Di chuyển vào thư mục dự án: cd D:\**\MiniBog
    - Chạy ứng dụng: mvn spring-boot:run
 
-- Frontend
+- Frontend:
+   - Công nghệ: **React + Vite + TypeScript**
    - URL chạy client: http://localhost:5173
    - Các bước:
       - Cài đặt dependencies: npm install
