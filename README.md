@@ -45,3 +45,11 @@ spring.jpa.show-sql=true
    - Tạo, sửa, xóa bài viết (chỉ được phép thao tác trên bài viết của chính mình).
    - Hệ thống đăng ký và phân quyền chi tiết (mỗi vai trò có thể có nhiều quyền).
    - Hỗ trợ phân trang và tìm kiếm bài viết.
+
+Đăng nhập test:
+  - Client:
+      + email : test1@gmail.com
+        password : Admin123@
+  - Admin:
+      + email: admin@gmail.com
+      password: Admin123@
