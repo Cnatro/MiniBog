@@ -15,6 +15,7 @@ public interface PostMapper {
     Post toEntity(PostCreateDto postCreateDto);
 
     @Mapping(source = "user.id",target = "userId")
+    @Mapping(source = "user.username",target = "username")
     PostResponse toDto(Post post);
 
     void updatePost(PostCreateDto postCreateDto, @MappingTarget Post post);

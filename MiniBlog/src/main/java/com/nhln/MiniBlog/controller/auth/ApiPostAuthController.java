@@ -34,15 +34,14 @@ public class ApiPostAuthController {
     public ResponseEntity<PostResponse> updatePost(@RequestBody PostCreateDto postCreateDto,
                                                    @PathVariable Long id,
                                                    @AuthenticationPrincipal UserPrincipal userLogin) throws AccessDeniedException {
-        PostResponse response = this.postService.updatePost(userLogin,postCreateDto, id);
+        PostResponse response = this.postService.updatePost(userLogin, postCreateDto, id);
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
     @PreAuthorize("hasAuthority('post.detail')")
     @GetMapping("/{id}")
-    public ResponseEntity<PostResponse> getDetail(@PathVariable Long id,
-                                                  @AuthenticationPrincipal UserPrincipal userLogin) throws AccessDeniedException {
-        PostResponse response = this.postService.getPostById(userLogin,id);
+    public ResponseEntity<PostResponse> getDetail(@PathVariable Long id) {
+        PostResponse response = this.postService.getPostById(id);
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
@@ -50,7 +49,7 @@ public class ApiPostAuthController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePost(@PathVariable Long id,
                                            @AuthenticationPrincipal UserPrincipal userLogin) throws AccessDeniedException {
-        this.postService.deletePost(userLogin,id);
+        this.postService.deletePost(userLogin, id);
         return ResponseEntity.noContent().build();
     }
 }

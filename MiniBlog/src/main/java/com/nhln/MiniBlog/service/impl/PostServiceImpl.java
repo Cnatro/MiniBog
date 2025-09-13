@@ -64,13 +64,10 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public PostResponse getPostById(UserPrincipal userLogin, Long id) throws AccessDeniedException {
+    public PostResponse getPostById(Long id) {
         Post postExit = this.postRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Post not found: " + id));
 
-        if (isCanModifyPost(userLogin, postExit)) {
-            throw new AccessDeniedException("You do not have permission to edit this post.");
-        }
         return this.postMapper.toDto(postExit);
     }
 

@@ -14,7 +14,7 @@ import java.nio.file.AccessDeniedException;
 public interface PostService {
     PostResponse persistPost(PostCreateDto postCreateDto);
     PostResponse updatePost(UserPrincipal userLogin, PostCreateDto postCreateDto, Long id) throws AccessDeniedException;
-    PostResponse getPostById(UserPrincipal userLogin,Long id) throws AccessDeniedException;
+    PostResponse getPostById(Long id);
     void deletePost(UserPrincipal userLogin,Long id) throws AccessDeniedException;
     PageResponseDto<PostResponse> getPosts(Pageable pageable, PostFilter postFilter);
 }

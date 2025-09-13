@@ -32,7 +32,6 @@ public class ApiUserPublicController {
 
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody UserLoginDto userLoginDto) throws JOSEException {
-        System.out.println(this.userService.verify(userLoginDto));
         if (this.userService.verify(userLoginDto)) {
             try {
                 String token = this.jwtUtil.generateToke(userLoginDto.getEmail());

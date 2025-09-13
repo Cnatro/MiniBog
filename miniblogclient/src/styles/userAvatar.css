@@ -1,0 +1,85 @@
+.user-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: #f8f9fa;
+  transition: background 0.2s ease-in-out;
+}
+
+.user-nav:hover {
+  background: #e9ecef;
+}
+
+.user-nav h5 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #212529;
+  max-width: 120px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.user-nav-img-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid #dee2e6;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-nav-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-nav-sub {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  min-width: 180px;
+  background: #fff;
+  border-radius: 0.6rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.25s ease-in-out;
+  z-index: 1000;
+}
+
+.user-sub-open .user-nav-sub {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.user-nav-sub-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #495057;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.user-nav-sub-link:hover {
+  background: #f8f9fa;
+  color: #0d6efd;
+}
+
+.user-nav-sub-link svg {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}

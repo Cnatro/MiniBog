@@ -17,6 +17,7 @@ public class PostResponse {
     String title;
     String content;
     Long userId;
+    String username;
     String imageUrl;
     LocalDateTime createdDate;
     LocalDateTime updatedDate;
