@@ -27,7 +27,7 @@
 - Các chứng năng chính:
     + Client đăng nhập qua token
     + Client có thể tạo bài viết khi đã đăng nhập, chỉ được phép sửa và xóa bài viết của chính mình
-    + Có thể đăng kí, đăng nhập.
+    + Có thể đăng kí, đăng nhập. ( có phân quyền chi tiết: với một vai trò sẽ có nhiều quyền )
     + Có phân trang, tìm kiếm
 
 
