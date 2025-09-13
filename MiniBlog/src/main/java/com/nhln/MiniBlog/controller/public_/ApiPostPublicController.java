@@ -27,5 +27,11 @@ public class ApiPostPublicController {
         return ResponseEntity.status(HttpStatus.OK).body(postData);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<PostResponse> getDetail(@PathVariable Long id) {
+        PostResponse response = this.postService.getPostById(id);
+        return ResponseEntity.status(HttpStatus.OK).body(response);
+    }
+
 
 }

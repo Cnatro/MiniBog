@@ -23,7 +23,7 @@ export const getPosts =
 export const getPostById = (id: number) => async (dispatch: AppDispatch) => {
   dispatch({ type: ACTION_TYPE.GET_POST_DETAIL });
   try {
-    const res = await authApis().get(`${endpoints["addPost"]}/${id}`);
+    const res = await authApis().get(`${endpoints["posts"]}/${id}`);
     dispatch({
       type: ACTION_TYPE.GET_POST_DETAIL_SUCCESS,
       payload: res.data,

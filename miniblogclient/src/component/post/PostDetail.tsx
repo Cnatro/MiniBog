@@ -140,7 +140,7 @@ const PostDetail: React.FC = () => {
                 </div>
 
                 {/* Action buttons */}
-                {user.id == postDetail?.userId && (
+                {user && user.id == postDetail?.userId && (
                   <div className="addpost-submitbox">
                     <button
                       type="submit"
