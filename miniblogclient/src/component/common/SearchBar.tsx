@@ -7,7 +7,7 @@ import { useAppDispatch } from "../../hooks/hooks";
 
 const SearchBar: React.FC = () => {
   const [searchInput, setSearchInput] = useState("");
-  const { filter, isLoading } = useSearch();
+  const { isLoading } = useSearch();
   const dispatch = useAppDispatch();
   const searchbarRef = useRef<HTMLDivElement>(null);
   //   const dispatch = useAppDispatch();

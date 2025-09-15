@@ -1,5 +1,5 @@
 import axios, { type AxiosInstance } from "axios";
-const BASE_URL = "http://localhost:8080/miniblog/api";
+const BASE_URL = "https://miniblog-web-0702.up.railway.app/miniblog/api";
 
 export const endpoints = {
   posts: "/public/posts",
