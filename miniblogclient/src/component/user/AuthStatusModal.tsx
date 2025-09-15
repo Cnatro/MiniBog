@@ -23,7 +23,7 @@ const AuthStatusModal = () => {
       <Modal.Header className="bg-success text-white">
         <Modal.Title>SUCCESS</Modal.Title>
       </Modal.Header>
-      <Modal.Body>{authStatus?.message || "Đăng nhập thành công!"}</Modal.Body>
+      <Modal.Body>{authStatus?.message}</Modal.Body>
     </Modal>
   );
 };
